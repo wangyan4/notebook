@@ -1,0 +1,829 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>React · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="IT-project-management.html" />
+    
+    
+    <link rel="prev" href="./" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2" data-path="React.html">
+            
+                <a href="React.html">
+            
+                    
+                    React
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="IT-project-management.html">
+            
+                <a href="IT-project-management.html">
+            
+                    
+                    IT项目管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="vue.html">
+            
+                <a href="vue.html">
+            
+                    
+                    Vue
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    [第一章](ch01.md
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="front-end.html">
+            
+                <a href="front-end.html">
+            
+                    
+                    前端性能优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >React</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x5F15;&#x5165;&#x7EC4;&#x4EF6;&#x5E93;">&#x5F15;&#x5165;&#x7EC4;&#x4EF6;&#x5E93;</h1>
+<pre><code class="lang-react">import React from &apos;react&apos;;
+
+import ReactDOM from &apos;react-dom&apos;;
+
+{*&#x4E24;&#x4E2A;&#x6700;&#x57FA;&#x672C;&#x7684;&#x7EC4;&#x4EF6;&#x5E93;*}
+</code></pre>
+<h1 id="&#x521B;&#x5EFA;&#x7EC4;&#x4EF6;&#x7684;&#x4E24;&#x79CD;&#x65B9;&#x5F0F;">&#x521B;&#x5EFA;&#x7EC4;&#x4EF6;&#x7684;&#x4E24;&#x79CD;&#x65B9;&#x5F0F;</h1>
+<h3 id="&#x51FD;&#x6570;&#x7EC4;&#x4EF6;-&#x65E0;&#x751F;&#x547D;&#x5468;&#x671F;">&#x51FD;&#x6570;&#x7EC4;&#x4EF6; &#x65E0;&#x751F;&#x547D;&#x5468;&#x671F;</h3>
+<pre><code class="lang-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Demo</span>(<span class="hljs-params"></span>)</span>{
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">add</span>(<span class="hljs-params">value</span>) </span>{
+        <span class="hljs-built_in">console</span>.log(value);
+    }
+    <span class="hljs-keyword">return</span>(
+        <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+            //&#x903B;&#x8F91;&#x4EE3;&#x7801;&#x9700;&#x8981;&#x5199;&#x5728;{}&#x4E2D;
+            //&#x5229;&#x7528;map&#x4FBF;&#x5229;&#x5F97;&#x5230;&#x7684;&#x5217;&#x8868;&#x9879;&#x9700;&#x8981;&#x8BBE;&#x7F6E;key&#x503C;&#x6765;&#x4FDD;&#x6301;&#x552F;&#x4E00;&#x6027;&#xFF0C;&#x975E;&#x5230;&#x4E0D;&#x5F97;&#x5DF2;&#x60C5;&#x51B5;&#x4E0B;&#x624D;&#x4F1A;&#x91C7;&#x7528;index&#x4F5C;&#x4E3A;key&#x503C;
+            {
+                [1,2,3].map((item)=&gt;{
+                    return(
+                        <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">key</span>=<span class="hljs-string">{item}</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{add(item)}</span>&gt;</span>{item}<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                    )
+                })
+            }
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+    )
+}
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> Demo;
+</code></pre>
+<h3 id="&#x7C7B;&#x7EC4;&#x4EF6;">&#x7C7B;&#x7EC4;&#x4EF6;</h3>
+<h3 id="&#x51FD;&#x6570;&#x7EC4;&#x4EF6;&#x7684;&#x751F;&#x547D;&#x5468;&#x671F;&#xFF1A;">&#x51FD;&#x6570;&#x7EC4;&#x4EF6;&#x7684;&#x751F;&#x547D;&#x5468;&#x671F;&#xFF1A;</h3>
+<pre><code class="lang-react">import {React , Component} from &apos;react&apos;;
+import &apos;ReactDOM&apos; from &apos;react-dom&apos;;
+
+class  Home extends Component {
+    constructor(){
+        super();
+        this.state={
+            count:0
+        }
+    }
+    componentWillMount(){
+        {*&#x5728;&#x6E32;&#x67D3;&#x524D;&#x8C03;&#x7528;*}
+    }
+    componentDidMount(){
+        {*&#x5728;&#x7B2C;&#x4E00;&#x6B21;&#x6E32;&#x67D3;&#x540E;&#x7ACB;&#x5373;&#x8C03;&#x7528;*}
+    }
+    componentDidUpdate(){
+        {*&#x5728;&#x7EC4;&#x4EF6;&#x66F4;&#x65B0;&#x5B8C;&#x540E;&#x7ACB;&#x5373;&#x8C03;&#x7528;&#xFF0C;&#x9996;&#x6B21;&#x6E32;&#x67D3;&#x4E0D;&#x6267;&#x884C;*}
+    }
+    componentWillUnmount(){
+        {*&#x5728;&#x7EC4;&#x4EF6;&#x4ECE;DOM&#x4E2D;&#x79FB;&#x9664;&#x4E4B;&#x524D;&#x8C03;&#x7528;*}
+    }
+    shouldComponentUpdate(){
+        {*&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;boolean&#x503C;&#x82E5;&#x4E3A;true&#x600E;&#x4F1A;&#x6E32;&#x67D3;&#xFF0C;&#x5426;&#x5219;&#x4E0D;&#x4F1A;&#x6E32;&#x67D3;*}
+    }
+    {*&#x5728;&#x8FD9;&#x91CC;&#x4F7F;&#x7528;&#x7BAD;&#x5934;&#x51FD;&#x6570;&#x4E3A;&#x4E86;&#x89E3;&#x51B3;this&#x7684;&#x6307;&#x5411;&#x95EE;&#x9898;*}
+    {*&#x6216;&#x8005;&#x5728;constructor()&#x4E2D;&#x624B;&#x52A8;&#x7ED1;&#x5B9A;this&#x7684;&#x6307;&#x5411;*}
+       add=(value)=&gt;{
+        console.log(value);
+    }
+    render(){
+        &lt;div&gt;
+            {*&#x7EC4;&#x4EF6;&#x76F4;&#x63A5;&#x5F53;&#x4F5C;&#x6807;&#x7B7E;&#x8C03;&#x7528;*}
+            {*&#x8C03;&#x7528;&#x7EC4;&#x4EF6;&#x7684;&#x65F6;&#x5019;&#x53EF;&#x4EE5;&#x4E3A;&#x8DEF;&#x7531;&#x4F20;&#x53C2;&#xFF0C;&#x53EF;&#x4EE5;&#x662F;&#x53D8;&#x91CF;&#x7684;&#x503C;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x662F;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#x7528;&#x6765;&#x63A5;&#x6536;&#x5B50;&#x7EC4;&#x4EF6;&#x7684;&#x8FD4;&#x56DE;&#x503C;*}
+            &lt;Demo count={this.state.count} add={this.add}/&gt;
+        &lt;/div&gt;
+    }
+}
+export default Home;
+</code></pre>
+<h1 id="&#x8DEF;&#x7531;">&#x8DEF;&#x7531;</h1>
+<p><strong><em>&#x8DEF;&#x7531;&#x7684;&#x5B9E;&#x73B0;&#x539F;&#x7406;</em></strong>&#x662F;&#x57FA;&#x4E8E;<strong>&#x6267;&#x884C;&#x4E0A;&#x4E0B;&#x6587;</strong>&#x7684;</p>
+<blockquote>
+<p>React Router &#x662F;&#x57FA;&#x4E8E;React&#x4E4B;&#x4E0A;&#x7684;&#x7EC4;&#x4EF6;&#x5E93;&#xFF0C;&#x4ED6;&#x662F;&#x4E3A;&#x4E86;&#x5FEB;&#x901F;&#x6DFB;&#x52A0;&#x7EC4;&#x4EF6;&#xFF0C;&#x5E76;&#x4FDD;&#x6301;&#x548C;URL&#x7684;&#x540C;&#x6B65;</p>
+<ul>
+<li><code>BrowserRouter</code> &#x548C; <code>HashRouter</code>    &#x7528;&#x6CD5;&#x76F8;&#x540C;&#x4E0D;&#x540C;&#x7684;&#x662F;<code>URl</code>&#xFF0C;<code>HashRouter</code>&#x7684;<code>URL</code>&#x4F1A;&#x5728;&#x8DEF;&#x5F84;&#x524D;&#x9762;&#x6DFB;&#x52A0;#</li>
+</ul>
+<p>&#x4F8B;&#x5982;&#x5F53;&#x4F60;&#x901A;&#x8FC7;localhost:3000/&#x8BBF;&#x95EE;&#x65F6;&#xFF0C;<code>BrowserRouter</code>&#x7684;&#x8DEF;&#x5F84;&#x5C31;&#x662F;<code>/</code>&#xFF0C;&#x800C;<code>HashRouter</code>&#x5219;&#x662F;<code>/#/</code></p>
+<blockquote>
+<p><code>Router</code> &#x4F5C;&#x4E3A;&#x6700;&#x5916;&#x5C42;&#x7684;&#x5305;&#x88F9;&#x5C42; </p>
+<ul>
+<li>&#x53C2;&#x6570;&#x53EF;&#x4EE5;&#x6709;<code>basename</code> &#x662F;&#x7528;&#x6765;&#x6DFB;&#x52A0;&#x57FA;&#x672C;&#x8DEF;&#x5F84;&#x7684;</li>
+</ul>
+<p><code>Switch</code> &#x6765;&#x5305;&#x88F9;<code>Route</code> &#x6765;&#x907F;&#x514D;&#x8DEF;&#x7531;&#x7684;&#x91CD;&#x590D;&#x5339;&#x914D;</p>
+<p><code>Route</code> &#x4F5C;&#x4E3A;&#x5F15;&#x5165;&#x5904;&#x7406;<code>URl</code> &#x7684;&#x8DEF;&#x7531; &#xFF0C;<code>Route</code>  &#x8FD8;&#x53EF;&#x4EE5;&#x662F;&#x53CC;&#x6807;&#x7B7E;&#x53CC;&#x6807;&#x7B7E;&#x7684;&#x5F15;&#x5165;&#x7EC4;&#x4EF6;,&#x4F46;&#x662F;&#x8FD9;&#x4E48;&#x5F15;&#x5165;&#x53EF;&#x80FD;&#x4F1A;&#x6709;&#x8DEF;&#x7531;&#x53C2;&#x6570;&#x53D6;&#x4E0D;&#x5230;&#x7684;&#x95EE;&#x9898;</p>
+<ul>
+<li>&#x53C2;&#x6570;&#x6709;path&#x8868;&#x793A;&#x5F53;<code>URL</code> &#x548C;path&#x76F8;&#x540C;&#x65F6; &#x6267;&#x884C;&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;component&#x6240;&#x6307;&#x5411;&#x7684;&#x7EC4;&#x4EF6;(<strong>&#x6CE8;&#x610F;&#x8FD9;&#x91CC;&#x7684;component&#x548C;&#x7C7B;&#x7EC4;&#x4EF6;&#x7EE7;&#x627F;&#x7684;Component&#x5927;&#x5C0F;&#x5199;&#x662F;&#x4E0D;&#x4E00;&#x6837;&#x7684;</strong>)</li>
+<li>exact &#x552F;&#x4E00;&#x6027;&#x5339;&#x914D;</li>
+</ul>
+<p><code>Link</code>&#x4F5C;&#x4E3A;&#x8DEF;&#x7531;&#x7684;&#x8DF3;&#x8F6C;&#xFF0C;&#x672C;&#x8D28;&#x662F;&#x4E00;&#x4E2A;a&#x6807;&#x7B7E;</p>
+<ul>
+<li>&#x53C2;&#x6570;to&#x7C7B;&#x4F3C;&#x4E8E;a&#x6807;&#x7B7E;&#x7684;<code>href</code>&#x5B9E;&#x73B0;&#x8DEF;&#x7531;&#x7684;&#x8DF3;&#x8F6C;&#xFF0C;&#x4F46;&#x662F;a&#x6807;&#x7B7E;&#x7684;&#x9ED8;&#x8BA4;&#x884C;&#x4E3A;&#x662F;&#x8DF3;&#x8F6C;&#x9875;&#x9762;&#xFF0C;to&#x7684;&#x503C;&#x53EF;&#x4EE5;&#x662F;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x662F;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;</li>
+</ul>
+<p><code>NavLink</code>&#x548C;<code>Link</code>&#x4E00;&#x6837;&#xFF0C;&#x4E0D;&#x540C;&#x70B9;&#x662F;<code>NavLink</code>&#x53EF;&#x4EE5;&#x4E3A;&#x94FE;&#x63A5;&#x9009;&#x4E2D;&#x65F6;&#x6DFB;&#x52A0;&#x6837;&#x5F0F;</p>
+<p><code>Redirect</code> &#x8DEF;&#x7531;&#x91CD;&#x5B9A;&#x5411;</p>
+</blockquote>
+</blockquote>
+<h1 id="portal">portal</h1>
+<blockquote>
+<p><strong>Portal</strong>  &#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x79CD;&#x5C06;&#x5B50;&#x8282;&#x70B9;&#x6E32;&#x67D3;&#x5230;&#x5B58;&#x5728;&#x4E8E;&#x7236;&#x7EC4;&#x4EF6;&#x4EE5;&#x5916;&#x7684; DOM &#x8282;&#x70B9;&#x7684;&#x4F18;&#x79C0;&#x7684;&#x65B9;&#x6848;&#x3002;</p>
+</blockquote>
+<pre><code class="lang-react">import React, { Component } from &apos;react&apos;
+import Portal from &apos;./Portal&apos;
+export default class ParentPortal extends Component {
+  handleClick = ()=&gt;{
+    console.log(&apos;parentportal click&apos;);
+  }
+  render() {
+    return (
+      &lt;div onClick = {this.handleClick}&gt;
+        &lt;Portal /&gt;
+      &lt;/div&gt;
+    )
+  }
+}
+</code></pre>
+<pre><code class="lang-react">import React, { Component } from &apos;react&apos;
+import ReactDOM from &apos;react-dom&apos;
+export default class Portal extends Component {
+  handleClick = ()=&gt;{
+    console.log(&apos;portal click&apos;);
+  }
+  render() {
+    return ReactDOM.createPortal(
+             &lt;div&gt;
+                   &lt;h1 onClick = {this.handleClick}&gt;Portal&lt;/h1&gt;
+            &lt;/div&gt;,
+         document.body        
+         )
+  }
+}
+</code></pre>
+<ul>
+<li><code>ReactDOM.createPortal()</code> &#x65B9;&#x6CD5;&#x542B;&#x6709;&#x4E24;&#x4E2A;&#x53C2;&#x6570; &#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x662F;&#x53EF;&#x6E32;&#x67D3;&#x7684;<strong>React&#x5143;&#x7D20;</strong>,&#x7B2C;&#x4E8C;&#x4E2A;&#x662F;DOM&#x8282;&#x70B9;</li>
+<li>&#x8FD9;&#x6837;&#x7684;&#x7EC4;&#x4EF6;&#x867D;&#x7136;&#x5728;<code>ParentPortal</code> &#x7EC4;&#x4EF6;&#x8C03;&#x7528;&#x4E86;<code>Portal</code> &#x7EC4;&#x4EF6;&#x4F46;&#x662F;<code>Portal</code> &#x5E76;&#x4E0D;&#x4F1A;&#x6E32;&#x67D3;&#x5230;<code>ParentPortal</code> &#x4E2D;&#x53BB;&#xFF0C;&#x800C;&#x662F;&#x6E32;&#x67D3;&#x5230;<code>createPortal</code> &#x65B9;&#x6CD5;&#x7684;&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#x4E2D;</li>
+</ul>
+<h1 id="context-&#x6267;&#x884C;&#x4E0A;&#x4E0B;&#x6587;">Context &#x6267;&#x884C;&#x4E0A;&#x4E0B;&#x6587;</h1>
+<ul>
+<li><strong>&#x4F7F;&#x7528;context&#x6700;&#x5927;&#x7684;&#x597D;&#x5904;&#x5C31;&#x662F;&#x53EF;&#x4EE5;&#x907F;&#x514D;&#x9010;&#x5C42;props&#x4F20;&#x9012;&#x53C2;&#x6570;</strong> </li>
+</ul>
+<blockquote>
+<p>Context</p>
+<ol>
+<li><p>&#x751F;&#x6210;Context&#xFF0C;&#x53EF;&#x5199;&#x5728;&#x4E00;&#x4E2A; JS&#x6587;&#x4EF6;&#x4E2D;&#xFF0C;&#x7528;export &#x5BFC;&#x51FA;</p>
+</li>
+<li><p>&#x5728;&#x6839;&#x7EC4;&#x4EF6;&#x4E0A;import Provider&#xFF0C;&#x5E76;&#x914D;&#x7F6E;Provider&#xFF0C;&#x52A0;&#x4E0A;value&#x5C5E;&#x6027;</p>
+</li>
+<li><p>&#x5728;&#x9700;&#x8981;&#x83B7;&#x53D6;&#x6570;&#x636E;&#x7684;&#x7EC4;&#x4EF6;&#x4E0A;import Consumer&#xFF0C;&#x5E76;&#x914D;&#x7F6E;Consumer&#xFF0C;&#x83B7;&#x53D6;&#x6570;&#x636E;</p>
+<p>Consumer&#x7EC4;&#x4EF6;&#x91CC;&#x662F;&#x4E2A;&#x51FD;&#x6570;&#xFF0C;&#x51FD;&#x6570;&#x7684;&#x53C2;&#x6570;&#x662F;&#x4F20;&#x8FC7;&#x6765;&#x7684;value</p>
+</li>
+</ol>
+</blockquote>
+<pre><code class="lang-react">import React from &apos;react&apos;;
+export let context = React.createContext();
+export let context2 = React.createContext();
+</code></pre>
+<p>&#x7136;&#x540E;&#x5728;&#x5916;&#x5C42;&#x7EC4;&#x4EF6;&#x4E2D;&#x7528;Provider&#x5305;&#x88F9;&#x8D77;&#x6765;&#xFF0C;&#x8C03;&#x7528;&#x7684;&#x5B50;&#x7EC4;&#x4EF6;&#x90FD;&#x53EF;&#x4EE5;&#x53D6;&#x5230;value&#x5C5E;&#x6027;&#x7684;&#x503C;</p>
+<p>&#x5982;&#x679C;&#x6D89;&#x53CA;&#x5230;Provider&#x7684;&#x5D4C;&#x5957;&#xFF0C;&#x5B50;&#x7EC4;&#x4EF6;&#x4F1A;&#x7531;&#x91CC;&#x53CA;&#x5916;&#x627E;&#x5230;&#x7B2C;&#x4E00;&#x5C42;Provider&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x6700;&#x8FD1;&#x7684;&#x4E00;&#x5C42;Provider&#x4E0A;&#x7684;value&#x503C;</p>
+<pre><code class="lang-react">import React  from &apos;react&apos;
+import ReactDOM from &apos;react-dom&apos;;
+import {context&#xFF0C;context2} from &apos;./&#x76F8;&#x5BF9;&#x8DEF;&#x5F84;&apos;
+ReactDOM.render(
+    &lt;context.Provider value={123}&gt;
+        &lt;div&gt;ddd&lt;/div&gt;
+        &lt;context2.Provider value={456}&gt;
+             &lt;Child /&gt;
+        &lt;/context2.Provider&gt;
+    &lt;/context.Provider&gt;, 
+document.getElementById(&apos;root&apos;));
+</code></pre>
+<p>&#x5728;&#x5B50;&#x7EC4;&#x4EF6;&#x4E2D;<em>&#x6D88;&#x8D39;</em> &#x9700;&#x8981;&#x7528;&#x5230;&#x7684;&#x503C;&#x5F97;&#x65F6;&#x5019;&#xFF0C;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x8C03;&#x7528;<code>React.Consumer</code> &#x4E5F;&#x53EF;&#x4EE5;&#x8BBE;&#x7F6E; <code>contextType</code> &#x4ED6;&#x4F1A;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x7531;<code>React.createContext()</code> &#x521B;&#x5EFA;&#x7684;Context&#x5BF9;&#x8C61;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;<code>this.context</code> &#x6765;<em>&#x6D88;&#x8D39;</em> &#x6700;&#x8FD1;&#x7684;Context&#x7684;&#x503C;</p>
+<pre><code class="lang-react">import React, { Component } from &apos;react&apos;
+import {context2} from &apos;./Context&apos;
+export default class Child extends Component {
+  render() {
+    return (
+      &lt;div&gt;
+        &#x5B50;&#x7EC4;&#x4EF6;
+        &lt;div&gt;{this.context}&lt;/div&gt;
+        {/* &lt;context.Consumer&gt;
+          {
+            (id)=&gt;{
+              return  &lt;div&gt;{id}&lt;/div&gt;
+            }
+          }
+        &lt;/context.Consumer&gt; */}
+      &lt;/div&gt;
+    )
+  }
+}
+Child.contextType = context2;
+</code></pre>
+<h1 id="hoc-&#x9AD8;&#x9636;&#x7EC4;&#x4EF6;">HOC &#x9AD8;&#x9636;&#x7EC4;&#x4EF6;</h1>
+<ul>
+<li><strong>&#x9AD8;&#x9636;&#x7EC4;&#x4EF6;&#x7684;&#x76EE;&#x7684;&#x662F;&#x4E3A;&#x4E86;&#x590D;&#x7528;&#x7EC4;&#x4EF6;&#x5171;&#x6709;&#x7684;&#x903B;&#x8F91;</strong></li>
+</ul>
+<pre><code class="lang-react">class Music extends Component{
+    constructor() {
+      super();
+      this.state = {
+        data: []
+      }
+    }
+    componentDidMount() {
+      let url_api = &apos;https://api.apiopen.top/musicRankingsDetails?type=1&apos;;
+      let obj = {
+        method:&quot;post&quot;
+      }
+      fetch(url_api,obj)
+        .then((res) =&gt; res.json())
+        .then((data) =&gt; {
+          this.setState({
+            data: data.result
+          })
+        })
+    }
+    render(){
+       &lt;ul&gt;
+        &lt;h1&gt;{this.props.a}&lt;/h1&gt;
+        {
+          this.props.data.map((item,index)=&gt;
+            &lt;li key={index}&gt;{item.title}&lt;br/&gt;{item.author}&lt;/li&gt;)
+        }
+      &lt;/ul&gt;
+    }
+  }
+</code></pre>
+<pre><code class="lang-react">class Music extends Component{
+    constructor() {
+      super();
+      this.state = {
+        data: []
+      }
+    }
+    componentDidMount() {
+      let url_api = &apos;https://api.apiopen.top/musicRankingsDetails?type=1&apos;;
+      let obj = {
+        method:&quot;post&quot;
+      }
+      fetch(url_api,obj)
+        .then((res) =&gt; res.json())
+        .then((data) =&gt; {
+          this.setState({
+            data: data.result
+          })
+        })
+    }
+    render(){
+       &lt;ul&gt;
+        &lt;h1&gt;{this.props.b}&lt;/h1&gt;
+        {
+          this.props.data.map((item,index)=&gt;
+            &lt;li key={index}&gt;{item.title}&lt;br/&gt;{item.author}&lt;/li&gt;)
+        }
+      &lt;/ul&gt;
+    }
+  }
+</code></pre>
+<p>&#x200B;    &#x5BF9;&#x4E8E;&#x4EE5;&#x4E0A;&#x8FD9;&#x4E24;&#x6BB5;&#x4EE3;&#x7801;&#x6765;&#x8BF4;&#xFF0C;&#x5728;&#x5B9E;&#x9645;&#x5E94;&#x7528;&#x5F53;&#x4E2D;&#xFF0C;&#x9664;&#x4E86;&#x9700;&#x8981;fetch&#x7684;URL&#x548C;&#x9700;&#x8981;&#x6E32;&#x67D3;&#x7684;&#x5185;&#x5BB9;&#x4E0D;&#x4E00;&#x6837;&#x5916;&#xFF0C;&#x5176;&#x4ED6;&#x7684;&#x58F0;&#x660E;&#x5468;&#x671F;&#xFF0C;&#x4EE3;&#x7801;&#x903B;&#x8F91;&#x90FD;&#x662F;&#x4E00;&#x6837;&#x7684;&#xFF0C;&#x5982;&#x679C;&#x8FD9;&#x6837;&#x5199;&#x4E24;&#x4E2A;&#x7EC4;&#x4EF6;&#xFF0C;&#x90A3;&#x4E48;&#x4EE3;&#x7801;&#x7684;&#x5197;&#x4F59;&#x5EA6;&#x5F88;&#x5927;&#xFF0C;&#x4F1A;&#x5F71;&#x54CD;&#x5230;&#x6548;&#x7387;</p>
+<p>&#x200B;    &#x56E0;&#x6B64;&#x91C7;&#x7528;&#x9AD8;&#x9636;&#x7EC4;&#x4EF6;&#x4E4B;&#x540E;&#x8FD9;&#x4E24;&#x6BB5;&#x4EE3;&#x7801;&#x7684;&#x903B;&#x8F91;&#x53EF;&#x4EE5;&#x5171;&#x7528;&#xFF0C;&#x5C01;&#x88C5;&#x6210;&#x4E3A;&#x4E00;&#x4E2A;&#x7EC4;&#x4EF6;&#x6765;&#x5904;&#x7406;</p>
+<pre><code class="lang-react">import React, { Component } from &apos;react&apos;
+
+let url_api = &apos;https://api.apiopen.top/musicRankingsDetails?type=1&apos;;
+function getdisplayName(Com){
+  return Com.displayName || Com.name ||&quot;Component&quot;
+}
+function hoc(Com,url_api,title){
+  class Fetch extends Component{
+    constructor() {
+      super();
+      this.state = {
+        data: []
+      }
+    }
+    componentDidMount() {
+      console.log(fetch);
+      let obj = {
+        method:&quot;post&quot;
+      }
+      fetch(url_api,obj)
+        .then((res) =&gt; res.json())
+        .then((data) =&gt; {
+          this.setState({
+            data: data.result
+          })
+        })
+    }
+    render(){
+      //this.props &#x83B7;&#x5F97;&#x7684;&#x662F;&#x8C03;&#x7528;&#x65F6;&#x4F20;&#x5165;&#x7684;a b&#x7B49;
+      return &lt;Com {...this.props} data={this.state.data}/&gt;
+    }
+  }
+  //&#x4E3A;&#x7EC4;&#x4EF6;&#x52A8;&#x6001;&#x547D;&#x540D;
+  Fetch.displayName = `Fetch(${getdisplayName(Com)})`;
+  return Fetch;
+}
+class Music extends Component{
+  render(){
+    return( 
+      &lt;ul&gt;
+        &lt;h1&gt;{this.props.a}&lt;/h1&gt;
+        {
+          this.props.data.map((item,index)=&gt;
+               &lt;li key={index}&gt;{item.title}&lt;br/&gt;{item.author}&lt;/li&gt;)
+        }
+      &lt;/ul&gt;
+    )
+  }
+}
+class Music2 extends Component{
+  render(){
+    return(
+      &lt;ul&gt;
+        &lt;h1&gt;{this.props.b}&lt;/h1&gt;
+        {
+          this.props.data.map((item,index)=&gt;
+               &lt;p key={index}&gt;{item.title}&lt;br/&gt;{item.author}&lt;/p&gt;)
+        }
+      &lt;/ul&gt;
+    )
+  }
+}
+let Mymusic = hoc(Music,url_api,&quot;&#x97F3;&#x4E50;&quot;);
+let Mymusic2 = hoc(Music2,url_api,&quot;&#x65B0;&#x95FB;&quot;);
+export default class Hoc extends Component {
+  render() {
+    return (
+      &lt;div&gt;
+        &lt;Mymusic a=&apos;&#x97F3;&#x4E50;&apos;/&gt;
+        &lt;Mymusic2 b=&apos;&#x65B0;&#x95FB;&apos;/&gt;
+      &lt;/div&gt;
+    )
+  }
+}
+</code></pre>
+<p>&#x901A;&#x8FC7;&#x8FD9;&#x4E2A;&#x65B9;&#x5F0F;&#xFF0C;&#x53EF;&#x4EE5;&#x52A8;&#x6001;&#x4F20;&#x5165;props&#x548C;&#x9700;&#x8981;&#x8BFB;&#x53D6;&#x6570;&#x636E;&#x7684;URL&#xFF0C;&#x7136;&#x540E;&#x5B9E;&#x4F8B;&#x5316;&#x4E00;&#x4E2A;&#x7EC4;&#x4EF6;&#xFF0C;&#x5C06;&#x4E24;&#x4E2A;&#x7EC4;&#x4EF6;&#x4E0D;&#x540C;&#x7684;&#x90E8;&#x5206;&#x5206;&#x5F00;&#x5199;&#xFF0C;&#x76F8;&#x540C;&#x7684;&#x90E8;&#x5206;&#x5C01;&#x88C5;&#x5171;&#x7528;</p>
+<h1 id="hook">Hook</h1>
+<h5 id="&#x5728;&#x51FD;&#x6570;&#x7EC4;&#x4EF6;&#x4E2D;&#x50CF;&#x7C7B;&#x7EC4;&#x4EF6;&#x4E00;&#x6837;&#x8C03;&#x7528;&#x72B6;&#x6001;&#xFF0C;&#x5904;&#x7406;&#x6709;&#x526F;&#x4F5C;&#x7528;&#x7684;&#x51FD;&#x6570;&#xFF0C;&#x4F8B;&#x5982;&#x5B9A;&#x65F6;&#x5668;">&#x5728;&#x51FD;&#x6570;&#x7EC4;&#x4EF6;&#x4E2D;&#x50CF;&#x7C7B;&#x7EC4;&#x4EF6;&#x4E00;&#x6837;&#x8C03;&#x7528;&#x72B6;&#x6001;&#xFF0C;&#x5904;&#x7406;&#x6709;&#x526F;&#x4F5C;&#x7528;&#x7684;&#x51FD;&#x6570;&#xFF0C;&#x4F8B;&#x5982;&#x5B9A;&#x65F6;&#x5668;</h5>
+<ul>
+<li><p><code>useState</code></p>
+</li>
+<li><p><code>userEffect</code></p>
+<h5 id="react-router-dom&#x4E2D;&#x7684;hook">react-router-dom&#x4E2D;&#x7684;hook</h5>
+</li>
+<li><p><code>useHistory</code></p>
+</li>
+<li><p><code>useLocation</code> </p>
+</li>
+<li><p><code>useParams</code></p>
+</li>
+<li><p><code>useRouteMatch</code></p>
+</li>
+</ul>
+<pre><code class="lang-react">//&#x5F15;&#x5165;
+import react,{Component,useState} from &apos;react&apos;;
+//useState&#x7528;&#x6CD5;&#xFF1A;
+let [num,setNum] = useState(defaultValue);
+&#x8FD9;&#x91CC;&#x7684;num&#x5C31;&#x76F8;&#x5F53;&#x4E8E;&#xFF0C;&#x7C7B;&#x7EC4;&#x4EF6;&#x5F53;&#x4E2D;&#x7684;&#x72B6;&#x6001;&#xFF0C;setNum&#x5C31;&#x76F8;&#x5F53;&#x4E8E;&#x7C7B;&#x7EC4;&#x4EF6;&#x4E2D;&#x7684;&#x66F4;&#x65B0;&#x72B6;&#x6001;
+//useEffect&#x7528;&#x6CD5;
+useEffect(()=&gt;{
+    ...&#x4E00;&#x4E9B;&#x64CD;&#x4F5C;
+},[])
+useEfftect &#x6709;&#x4E24;&#x4E2A;&#x53C2;&#x6570;
+&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x662F;&#x56DE;&#x8C03;&#x51FD;&#x6570;
+&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#x662F;&#x4E00;&#x4E2A;&#x53D8;&#x91CF;&#x6216;&#x6570;&#x7EC4; &#x5F53;&#x53D8;&#x91CF;&#x6216;&#x6570;&#x7EC4;&#x53D8;&#x5316;&#x65F6;&#x4F1A;&#x6267;&#x884C;&#x4E00;&#x904D;&#x56DE;&#x8C03;&#x51FD;&#x6570;
+&#x4F8B;&#x5982;&#x50CF;&#x5B9A;&#x65F6;&#x5668;&#x3001;fetch&#x6570;&#x636E;&#x65F6;&#x7684;&#x52A8;&#x6001;&#x83B7;&#x53D6;&#x7B49;&#x8FD9;&#x4E9B;&#x6709;&#x526F;&#x4F5C;&#x7528;&#x7684;&#x64CD;&#x4F5C;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;useEffect&#x6765;&#x5904;&#x7406;
+&#x7C7B;&#x4F3C;&#x7C7B;&#x7EC4;&#x4EF6;&#x5F53;&#x4E2D;&#x7684;&#x751F;&#x547D;&#x5468;&#x671F;
+
+react-router-dom&#x4E2D;&#x7684;&#x56DB;&#x4E2A;&#x5BF9;&#x5E94;&#x7684;&#x5C31;&#x662F;&#x5C5E;&#x6027;&#x5F53;&#x4E2D;&#x7684;history&#x3001;location&#x3001;params&#x3001;match
+&#x5728;&#x51FD;&#x6570;&#x7EC4;&#x4EF6;&#x4E2D;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;useHistory()&#x3001;useLocation()&#x3001;useParams()&#x3001;useRouteMatch()
+&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x83B7;&#x53D6;&#x5230;&#xFF0C;&#x76F4;&#x63A5;&#x8C03;&#x7528;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x8FDB;&#x884C;&#x89E3;&#x6784;&#x8D4B;&#x503C;
+</code></pre>
+<h1 id="redux">redux</h1>
+<p> <img src="https://upload-images.jianshu.io/upload_images/2547292-cae4b69ca467d0f3.png?imageMogr2/auto-orient/strip|imageView2/2/w/638/format/webp" alt="img"> </p>
+<p>Redux&#x5305;&#x542B;<code>ActionCreators</code>&#x3001;<code>Reducers</code>&#x3001;<code>Store</code></p>
+<p>Store&#x662F;&#x6570;&#x636E;&#x5B58;&#x50A8;&#x4E2D;&#x5FC3;</p>
+<p>ActionCreators&#x4F5C;&#x4E3A;&#x4E00;&#x4E2A;&#x5A92;&#x4ECB;&#xFF0C;&#x5C06;&#x754C;&#x9762;&#x7684;&#x6570;&#x636E;&#x53D1;&#x9001;&#x7ED9;Reducers</p>
+<p>Reducers&#x72B6;&#x6001;&#x7684;&#x96C6;&#x5408;&#xFF0C;&#x63A5;&#x53D7;Action&#x7136;&#x540E;&#x6839;&#x636E;Action&#x66F4;&#x65B0;&#x72B6;&#x6001;&#x8FD4;&#x56DE;&#x7ED9;Store</p>
+<ul>
+<li><p>&#x521B;&#x5EFA;Reducers ,Reducers &#x4E2D;&#x53EF;&#x4EE5;&#x540C;&#x65F6;&#x5305;&#x542B;&#x591A;&#x4E2A;&#x72B6;&#x6001;&#x901A;&#x8FC7;&#x4E0D;&#x540C;&#x7684;&#x51FD;&#x6570;&#x6765;&#x5904;&#x7406;</p>
+<p>&#x53EF;&#x4EE5;&#x901A;&#x8FC7;redux&#x4E2D;&#x7684;combineReducers&#x6765;&#x5408;&#x5E76;&#x591A;&#x4E2A;Reducers &#x7136;&#x540E;&#x5BFC;&#x51FA;</p>
+</li>
+</ul>
+<pre><code class="lang-react">import {combineReducers} from &apos;redux&apos;;
+let todos = [1,2,3];
+function todo(state=todos,action){
+    switch(action.type){
+      case &apos;add_todo_item&apos;:
+        return [...state,action.value];
+      case &apos;del_todo_item&apos;:
+        let newTodo = [...state];
+        newTodo.splice(action.value,1);
+        return newTodo;
+      default:
+        return state;
+    }
+}
+
+let inputValue = &apos;todolist&apos;;
+function changeValue(state=inputValue,action){
+  switch(action.type){
+    case &apos;change_input_value&apos;:
+      return [...state,action.value];
+    default:
+      return state;
+  }
+}
+
+let userInfor={
+  loginname:&apos;&apos;,
+  score:0
+}
+function login(state=userInfor,action){
+  switch(action.type){
+    case &apos;login_success&apos;:
+      return action.value;
+    default:
+        return state;
+  }
+}
+
+//&#x5408;&#x5E76;reducers
+let reducers = combineReducers({
+  todo,changeValue,login
+})
+
+export default reducers;
+</code></pre>
+<ul>
+<li>&#x521B;&#x5EFA;&#x4E00;&#x4E2A;Store &#x5E76;&#x5C06;Reducers&#x5F15;&#x5165;</li>
+</ul>
+<pre><code class="lang-react">import {createStore} from &apos;redux&apos;;
+import todo from &apos;./reducer&apos;;
+let store = createStore(todo);
+export default store;
+</code></pre>
+<ul>
+<li><p>actions&#x4E2D;&#x53EF;&#x4EE5;&#x5355;&#x72EC;&#x62C9;&#x51FA;&#x6765;&#x4E24;&#x4E2A;&#x6587;&#x4EF6;&#x5C06;Action&#x7684;&#x521B;&#x5EFA;&#x8FC7;&#x7A0B;&#x548C;Action&#x7684;type&#x96C6;&#x4E2D;&#x5230;&#x4E00;&#x8D77;</p>
+<p>&#x8FD9;&#x6837;&#x7684;&#x8BDD;&#x65B9;&#x4FBF;&#x7EDF;&#x4E00;&#x7BA1;&#x7406;&#xFF0C;&#x800C;&#x4E14;&#x7EC4;&#x4EF6;&#x4E2D;&#x7684;&#x4EE3;&#x7801;&#x4E5F;&#x7B80;&#x6D01;&#x4E0D;&#x4E71;</p>
+</li>
+</ul>
+<p>&#x4F46;&#x662F;&#x5373;&#x4F7F;&#x901A;&#x8FC7;&#x4EE5;&#x4E0A;&#x8FD9;&#x79CD;&#x65B9;&#x6CD5;&#x5F15;&#x5165;Redux&#x8FD8;&#x662F;&#x5B58;&#x5728;&#x7EC4;&#x4EF6;&#x7E41;&#x7410;&#x7684;&#x95EE;&#x9898;&#x5728;&#x6D3E;&#x53D1;action&#x7684;&#x8FC7;&#x7A0B;&#x8FD8;&#x53EF;&#x4EE5;&#x7B80;&#x5316;</p>
+<h1 id="react-redux">react-redux</h1>
+<p>&#x5F15;&#x5165;react-redux&#xFF0C;&#x901A;&#x8FC7;connect&#x65B9;&#x6CD5;&#x6765;&#x7B80;&#x5316;dispatch&#x8FC7;&#x7A0B;</p>
+<p>connect&#x662F;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#x53EF;&#x4EE5;&#x4F20;&#x5165;&#x53C2;&#x6570;</p>
+<p>&#x53EF;&#x4EE5;&#x907F;&#x514D;&#x5728;&#x6BCF;&#x4E2A;&#x7EC4;&#x4EF6;&#x4E2D;&#xFF0C;&#x5BFC;&#x5165;store</p>
+<pre><code class="lang-react">let mapStateToProps = (state)=&gt;{};
+let mapDispatchToProps = (dispatch)=&gt;{
+  return{
+    newLog:bindActionCreators(logFetch,dispatch)
+  }
+}
+//mapStateToProps&#xFF0C;&#x5C06;store&#x8F6C;&#x6362;&#x4E3A;props&#xFF0C;&#x5728;&#x7EC4;&#x4EF6;&#x4E2D;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;props&#x6765;&#x8C03;&#x7528;
+//&#x53EF;&#x4EE5;&#x5C06;&#x7EC4;&#x4EF6;&#x5185;&#x90E8;&#x7684;&#x51FD;&#x6570;&#x62C9;&#x51FA;&#x6765;&#x653E;&#x5728;&#x7EC4;&#x4EF6;&#x5916;&#xFF0C;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x901A;&#x8FC7;props&#x8C03;&#x7528;
+    //Redux &#x672C;&#x8EAB;&#x63D0;&#x4F9B;&#x4E86;bindActionCreators&#x51FD;&#x6570;&#xFF0C;&#x6765;&#x5C06;action&#x5305;&#x88C5;&#x6210;&#x76F4;&#x63A5;&#x53EF;&#x88AB;&#x8C03;&#x7528;&#x7684;&#x51FD;&#x6570;&#x3002;
+//Login &#x53C2;&#x6570;&#x662F;&#x5C06;dispatch&#x7ED1;&#x5B9A;&#x5230;Login&#x7EC4;&#x4EF6;&#x4E0A;
+export default connect(mapStateToProps,mapDispatchToProps)(Login);
+</code></pre>
+<h1 id="redux-thunk">redux-thunk</h1>
+<p>&#x4E2D;&#x95F4;&#x5F15;&#x5165;</p>
+<p>&#x5982;&#x679C;&#x4E0D;&#x5F15;&#x5165;&#x4E2D;&#x95F4;&#x4EF6;&#xFF0C;&#x90A3;&#x4E48;&#x8FD4;&#x56DE;&#x7684;action&#x53EA;&#x80FD;&#x662F;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#xFF0C;&#x5F53;&#x8C03;&#x7528;&#x4E86;&#x4E2D;&#x95F4;&#x4EF6;&#x4E4B;&#x540E;&#x5C31;&#x53EF;&#x4EE5;&#x5728;action&#x4E2D;&#x7F16;&#x5199;&#x903B;&#x8F91;</p>
+<pre><code class="lang-react">import {createStore,applyMiddleware} from &apos;redux&apos;;
+import todo from &apos;./reducer&apos;;
+import thunk from &apos;redux-thunk&apos;;
+let store = createStore(todo,applyMiddleware(thunk));
+export default store;
+</code></pre>
+<p>&#x5F02;&#x6B65;&#x5F0F;&#x7684;action,&#x5728;&#x8C03;&#x7528;&#x4E2D;&#x95F4;&#x4EF6;&#x4E4B;&#x540E;&#x8FD4;&#x56DE;&#x503C;&#x662F;&#x4E00;&#x4E2A;&#x51FD;&#x6570;</p>
+<pre><code class="lang-react">//&#x5F02;&#x6B65;&#x8BF7;&#x6C42;
+export const logFetch = (value) =&gt; {
+  return (dispatch) =&gt; {
+      fetch(&apos;https://cnodejs.org/api/v1/user/alsotang&apos;)
+        .then(res =&gt; res.json())
+        .then(res =&gt; {
+          console.log(res);
+          let userInfo = {
+            type: types.LOGIN_SUCCESS,
+            value: {
+              loginname: res.data.loginname,
+              score: res.data.score
+            }
+          };&#x3002;
+          dispatch({  
+            type: types.LOGIN_SUCCESS,
+            value: userInfo
+          })
+        })
+      }
+  }
+</code></pre>
+<h1 id="fragment">Fragment</h1>
+<pre><code class="lang-react"> var obj = {
+     type: &apos;h1&apos;,
+     props: {
+         id: &apos;box&apos;,
+         class: &apos;box&apos;,
+         children: [&apos;hello&apos;, &apos; world&apos;, {
+             type: &apos;p&apos;,
+             props: {
+                 id: &apos;title&apos;,
+                 class: &apos;title&apos;,
+                 children: [&apos;hello&apos;, &apos; react&apos;]
+             }
+         }]
+     }
+ }
+ function render(obj, ele) {
+     var {type,props} = obj;
+     // &#x6587;&#x6863;&#x788E;&#x7247;
+     var fragment = document.createDocumentFragment();
+     var doc = document.createElement(type);
+     for (var i in props) {
+         if (i === &apos;class&apos;) {
+             doc.setAttribute(i, props[i]);
+         } else if (i === &apos;children&apos;) {
+             for (var j = 0; j &lt; props[i].length; ++j) {
+                 if (typeof props.children[j] === &apos;object&apos;) {
+                     render(props.children[j], doc);
+                 } else {
+                     var txt = document.createTextNode(props.children[j]);
+                     doc.appendChild(txt);
+                 }
+             }
+         } else {
+             doc[i] = props[i];
+         }
+     }
+     fragment.appendChild(doc);
+     ele.appendChild(fragment);
+ }
+ render(obj, document.getElementById(&apos;root&apos;));
+</code></pre>
+<h1 id="refs">refs</h1>
+<p>&#x76F8;&#x5F53;&#x4E8E;&#x4E00;&#x4E2A;&#x5168;&#x5C40;&#x53D8;&#x91CF;&#xFF0C;&#x662F;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#xFF0C;&#x5728;&#x4E0D;&#x540C;&#x7684;&#x5730;&#x65B9;&#x7ED9;refs&#x6DFB;&#x52A0;&#x5C5E;&#x6027;&#xFF0C;&#x7136;&#x540E;&#x9700;&#x8981;&#x7528;&#x5230;&#x54EA;&#x4E2A;&#x7684;&#x8BDD;&#x76F4;&#x63A5;&#x7528;refs&#x5C31;&#x53EF;&#x4EE5;&#x9009;&#x5230;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: 简介">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="IT-project-management.html" class="navigation navigation-next " aria-label="Next page: IT项目管理">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"React","level":"1.2","depth":1,"next":{"title":"IT项目管理","level":"1.3","depth":1,"path":"IT-project-management.md","ref":"IT-project-management.md","articles":[]},"previous":{"title":"简介","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"React.md","mtime":"2020-02-21T12:01:21.911Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-02-21T12:02:01.890Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
