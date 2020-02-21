@@ -111,55 +111,6 @@ export default Home;
 >   >
 >   > ```Redirect``` 路由重定向
 
-``` react
-import {React , Component} from 'react';
-import ReactDOM from 'react-dom';
-import {BrowserRouter as Router ,Link ,NavLink ,Switch,Redirect} from 'react-router-dom';
-{*HashRouter 支持刷新路径重定向*}
-{*import {HashRouter as Router ,Link ,Switch,Redirect} from 'react-router-dom';*}
-
-//可以利用basename添加基本路径
-//例如 路径为/add 那么添加了basename之后路径就会在前面加上basename的值 变为 /home/database/add
-<Router basename="/home/databse">
-    <div>
-        //Link 跳转路由
-    	<Link to="/home">首页</Link>
-    	<Link to="/about">关于</Link>
-    	<Link to="/login">登录</Link>
-        //to 可以是一个对象,对象的属性可以有路径，查询字符串，状态等
-    	<Link to={{
-                pathname:"/hello",
-                search:"?age=16",
-                state:{
-                    count:0
-                }
-            }}>Hello</Link>
-        <NavLink to="/hello" activeStyle={{
-                width:"200px",color:"red"
-            }}>Hello</NavLink>
-    </div>
-    <div>
-        //路由放在Switch内部，为了避免重复匹配
-        //如果路由路径相同，那么在Switch内，只会匹配一次，如果没有Switch会匹配多次
-        //
-        <Switch>
-        	//定义路由,当跳转到指定路有时执行对应组件
-        	<Route exact path="/home" component={Home}/>
-        	<Route path="/home/：id" component={Home}/>
-        	<Route path="/about" component={About}/>
-        	<Route path="/login" component={Login}/>
-        	<Route path="/hello">
-        		<Hello />
-        	</Route>
-            //重定向两种写法
-            {*<Route path="/old" render={()=>{<Redirect to="/new"/>}}"/>*}
-            <Redirect from="/old" to="/new"/>
-        </Switch>
-        
-    </div>
-</Router>
-```
-
 # portal
 
 > **Portal**  提供了一种将子节点渲染到存在于父组件以外的 DOM 节点的优秀的方案。
