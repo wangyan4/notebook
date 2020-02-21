@@ -1,6 +1,6 @@
 ### 指令
 
-   	1.  v-cloak 解决插值表达式闪烁
+	1.  v-cloak 解决插值表达式闪烁
    	2.  v-text 默认没有闪烁
    	3.  v-bind 用来绑定属性   `v-bind:title=""` 简写 `：title=""`
    	4.  v-html 用来展示html结构字符串
@@ -14,3 +14,4 @@
              + .once 只触发一次
 
  	6.  v-model 双向数据绑定 **唯一** 
+	7.
